@@ -1,0 +1,49 @@
+<div
+	class="modal fade"
+	id="newProjectModal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="modalTitleId"
+	aria-hidden="true">
+	<div
+		class="modal-dialog modal-dialog-scrollable modal-lg me-3"
+		role="document">
+		<div class="modal-content">
+			<form method="POST" action="{% url 'create_project' %}">
+				{% csrf_token %}
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalTitleId">
+						Create a new project
+					</h5>
+					<button
+						type="button"
+						class="btn-close"
+						data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body flex-grow-1">
+					{% comment %} titulo de la tarea {% endcomment %}
+					<div class="mb-3">
+						<label for="" class="form-label">Name</label>
+						<input
+							type="text"
+							class="form-control"
+							name="name"
+							id="name"
+							aria-describedby="helpId"
+							placeholder="" />
+					</div>
+				</div>
+				<div class="modal-footer mb-0">
+					<button
+						type="button"
+						class="btn btn-secondary"
+						data-bs-dismiss="modal">
+						Close
+					</button>
+					<button type="submit" class="btn btn-primary">Save</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div
+	class="modal fade"
+	id="taskModal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="modalTitleId"
+	aria-hidden="true">
+	<div
+		class="modal-dialog modal-dialog-scrollable modal-md me-3"
+		role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalTitleId">Task information</h5>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body flex-grow-1">
+				<div class="mb-3 fs-3 d-flex fw-bold">
+					<p id="taskModalTitle"></p>
+				</div>
+				<div class="mb-3 fs-5">
+					<p class="fw-bold pe-1">Description</p>
+					<p id="taskModalDescription"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

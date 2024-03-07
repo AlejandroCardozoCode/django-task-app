@@ -1,0 +1,29 @@
+<ul class="list-group task-list">
+	{% for task in tasks %}
+	<li
+		class="list-group-item rounded-4 task-container my-2 py-3"
+		data-task-id="{{task.id}}">
+		<div class="row justify-content-between g-3">
+			<div class="col-sm-12 col-md-6 d-block">
+				<h4 class="m-0 d-inline pe-3 text-nowrap text-truncate">
+					{{task.title}}
+				</h4>
+				{% if task.done %}
+				<span class="badge text-bg-success">Done</span>
+				{% else %}
+				<span class="badge text-bg-danger">Peding</span>
+
+				{% endif %}
+			</div>
+			<div class="col-md-auto text-center">
+				<button class="btn btn-danger btn-task--delete text-nowrap">
+					Delete 🗑️️
+				</button>
+				<button class="btn btn-success btn-task--done text-nowrap">
+					Done ✅
+				</button>
+			</div>
+		</div>
+	</li>
+	{% endfor %}
+</ul>
